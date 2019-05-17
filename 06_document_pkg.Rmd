@@ -1,0 +1,58 @@
+# Documentation
+
+## Use roxygen (1)
+- do not repeat yourself and document consistently
+- make use of markdown to even further simplify the documentation
+- More information [here](https://cran.r-project.org/web/packages/roxygen2/vignettes/markdown.html)
+
+- `usethis::use_roxygen_md()` sets up everything
+- **Note**: If you try to document before setting this up, you probably need to install `roxygen2md` to convert existing documentation to markdown format in advance
+
+```{r, eval = FALSE}
+remotes::install_github("r-lib/roxygen2md")
+usethis::use_roxygen_md()
+```
+
+## Use roxygen (2)
+- we need to document `greets()` and the dataset
+- in Rstudio: `Code` $\rightarrow$ `Insert Roxygen Skeleton`
+- modify `R/greets.R` (note the Markdown tags)
+```{r comment='', echo = FALSE}
+cat(readLines("files/R/greets.R"), sep = "\n")
+```
+
+## Use roxygen (3)
+- documenting data is done via `R/data.R`
+```{r comment='', echo = FALSE}
+cat(readLines("files/R/data.R"), sep = "\n")
+```
+
+- update the documentation and the `NAMESPACE`
+
+```{r, eval = FALSE}
+devtools::document() # or in the Rstudio "Build"-tab
+```
+
+# Vignette
+## Adding a package vignette (1)
+- Package vignettes are a great way to demonstrate the functionality of your package
+- Setting everything up can be done with:
+
+```{r, eval = FALSE}
+usethis::use_vignette("intro")
+```
+
+- updates `NAMESPACE` with required `Imports` and `Suggests`
+- updates `DESCRIPTION` to specify the vignette builder (markdown)
+- adding files that should be ignored in `git` (see later)
+- creates `vignettes/intro.Rmd` with a default template
+
+## Adding a package vignette (2)
+- we modify `vignettes/intro.Rmd`
+
+```{r comment='', echo = FALSE}
+cat(readLines("files/vignettes/intro.Rmd"), sep = "\n")
+```
+
+- build with `devtools::build_vignettes()`
+- will be updated whenever we build the package.

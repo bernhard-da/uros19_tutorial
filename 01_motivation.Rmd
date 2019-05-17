@@ -1,0 +1,15 @@
+# Motivation
+## Warm Up
+- Why
+- How? $\rightarrow$ This is what we are now doing
+- But: in a nice and easy way
+    - using CI
+    - producing nicely formatted code
+    - automated tested code 
+- Good ideas:
+    - find a good, short name (Package [`available`](https://cran.r-project.org/package=available))
+    - think about 
+        * why the package exist and
+        * what functionality should it contain?
+    - define a namespace
+

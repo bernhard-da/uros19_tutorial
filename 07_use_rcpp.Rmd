@@ -1,0 +1,41 @@
+# Use Rcpp
+## Using Rcpp (1)
+- Setup the package to use `Rcpp` is easy
+```{r, eval = FALSE}
+usethis::use_rcpp()
+```
+
+- modifies the `DESCRIPTION` file 
+    * adds `Imports` and `LinkingTo` fields
+- creates a `src` folder
+- updates `.gitignore` and `.Rbuildignore` to exclude compiled files
+
+## Using Rcpp (2)
+- We get instructions how to update our `NAMESPACE` via roxygen2
+- we update a `R/urosconf-pkg.R` adding at the top
+
+```{r comment='', echo = FALSE}
+cat(readLines("files/R/urosconf-pkg.R"), sep = "\n")
+```
+
+## Using Rcpp (3)
+- The updated `DESCRIPTION` file now is
+```{r comment='', echo = FALSE}
+cat(readLines("files/DESCRIPTION_4"), sep = "\n")
+```
+
+## Using Rcpp (4)
+- finishing `Rcpp` requires to add a simple C++ function
+- content of `src/info.cpp`
+```{r comment='', echo = FALSE}
+cat(readLines("files/src/info.cpp"), sep = "\n")
+```
+- run `devtools::load_all()` and `devtools::document()`
+
+## Using Rcpp (5)
+- We can then either
+  - write a wrapper function and export those for the cpp function
+  - call it within an existing `R` function like `greets()`
+```{r comment='', echo = FALSE}
+cat(readLines("files/R/greets2.R"), sep = "\n")
+```

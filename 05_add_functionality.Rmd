@@ -1,0 +1,39 @@
+# Add functionality
+## Adding R code (1)
+- the `R` folder is by default empty
+- we write a simple function in `R/greets.R`
+- note, we're using a function from another package here!
+```{r comment='', echo = FALSE}
+cat(readLines("files/R/greets_nodoc.R"), sep = "\n")
+```
+
+- it is required to add the `glue` package to the `Imports` section of `DESCRIPTION`
+    - easy: `usethis::use_package("glue")`
+- if we use `glue::fun()`, this is all we need to do
+
+## Adding R code (2)
+- the `DESCRIPTION file now is`
+```{r comment='', echo = FALSE}
+cat(readLines("files/DESCRIPTION_3"), sep = "\n")
+```
+
+# Adding data
+## Adding data to the package (1)
+- Two possible ways:
+    - 1: directly use an existing data set with `usethis::use_data()`
+    - 2: use a script to generate data for improved reproducability
+- We give an example for the second approach
+```{r, eval = FALSE}
+usethis::use_data_raw()
+```
+
+- This create a folder `data-raw` in which we can put scripts that generate data
+
+## Adding data to the package (2)
+- `data-raw/urosdata.R` is a script to generate data (note the `set.seed` call)
+
+```{r comment='', echo = FALSE}
+cat(readLines("files/data-raw/urosdata.R"), sep = "\n")
+```
+- we just need to source this file
+- `usethis::use_data()` copies the dataset to the `data` folder and makes it available

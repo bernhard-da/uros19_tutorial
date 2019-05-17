@@ -1,0 +1,27 @@
+# Adding Features
+## Adding features (1)
+- Add a `NEWS.md` file in markdown format document track changes in the package
+
+```{r, eval = FALSE}
+usethis::use_news_md()
+```
+
+```{r comment='', echo = FALSE}
+cat(readLines("files/NEWS.md"), sep = "\n")
+```
+
+## Adding features (2)
+
+- Add a `README.(r)md` in (R)markdown format
+- already filled with a nice template that can be easily adjusted
+- The `README.md` generates the content at the bottom of a GitHub repository, such as how to install or use the package. 
+- You can also put your badges for number of downloads, version on CRAN (if applicable), continuous integration status, and code coverage.
+```{r, eval = FALSE}
+# plain markdown
+usethis::use_readme_md()
+
+# rmarkdown style (you can use code-chunks)
+usethis::use_readme_rmd()
+```
+- if using Rmarkdown, one has to regularily regenerate the `md` file!
+

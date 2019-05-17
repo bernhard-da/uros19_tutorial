@@ -1,0 +1,17 @@
+Package: urosconf
+Title: What the Package Does (One Line, Title Case)
+Version: 0.1
+Authors@R:
+  person(given = "Bernhard",
+         family = "Meindl",
+         role = c("aut", "cre"),
+         email = "bernhard.meindl@statistik.at")
+Description: What the package does (one paragraph).
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+LinkingTo:
+  Rcpp
+Imports:
+  Rcpp
+RoxygenNote: 6.1.1

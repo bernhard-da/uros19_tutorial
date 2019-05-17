@@ -1,0 +1,44 @@
+# Even more
+
+## Improve the package (1)
+- Add `badges` to your `README.md`
+```{r, eval = FALSE}
+# travis
+![Build](https://travis-ci.org/{user/repo}.svg?branch=master)]
+(https://travis-ci.org/{user/repo})
+
+# codecov.io
+[![Coverage](https://codecov.io/gh/{user/repo}/branch/master/graph/badge.svg)]
+(https://codecov.io/gh/{user/repo}/branch/master)
+```
+- many other badges available
+- don't forget the badge with the cool sunglasses from the [awesome official statistics software](https://github.com/SNStatComp/awesome-official-statistics-software)
+
+```{r, echo=FALSE, out.width='10%'}
+knitr::include_graphics("files/img/badge.png")
+```
+
+
+## Improve the package (2)
+- [pkgdown](https://pkgdown.r-lib.org/) is a nice way to build a static webpage for a package
+    - github has github pages (free hosting for static project pages)
+    - `usethis::use_pkgdown()`
+    - automatic deployment via travis $\rightarrow$ [documentation](https://pkgdown.r-lib.org/reference/deploy_site_github.html)
+- `devtools::spell_check()` allows to detect typos
+- use package analytics, e.g. using the [cranlogs](https://cranlogs.r-pkg.org/) package
+- think of good examples to help users
+
+## Finishing (1)
+- commit all changes to the local git repo
+- push the changes to github and let the magic happen
+    - the package is now built
+    - checked
+    - tested
+    - vignettes are built
+- if successful:
+    - code coverage is computed and synced
+    - code style is checked
+
+## Finishing (2)
+- Once everything works, it is easy to reproduce for other packages
+- `devtools::release()` ? :)

@@ -1,0 +1,27 @@
+# Code style
+
+## Setup automated code styling (1)
+- Readability of a package is improves a lot, when 
+    - coding style is consistent within the package
+    - e.g. `snake_case` vs. `camelCase` or indenting
+- one (of many) styleguides: [tidyverse styleguide](https://style.tidyverse.org)
+- Package [styler](https://cran.r-project.org/package=styler) allows automated code formatting
+- Package [lintr](https://cran.r-project.org/package=lintr) allows to automate checks
+
+## Setup automated code styling (2)
+- Linting rules can be defined either 
+    - directly within `lintr::lintr_package()` or
+    - in a file `.lintr` in the root of the package
+- Adding code-style checks to CI is easy by adding a line `.travis.yml` to the `after_success` step
+```{bash, eval = FALSE}
+after_success:
+   - # ... 
+   - Rscript -e 'lintr::lint_package()'
+```
+- Alternative: create `tests/testthat/test_style.R` with
+```{r, eval = FALSE}
+test_that("style is nice", {
+  lintr::expect_lint_free()
+})
+```
+

@@ -1,0 +1,45 @@
+# Create a Package
+
+## Traditionally
+- Traditionally
+    * `utils::package.skeleton()`
+    * manually writing `man`-files and managing `NAMESPACE`, ...
+- Idea:
+    - some functions and exports where defined 
+    - a `README` file with instructions was created
+- Problem:
+    - quite inconvenient
+
+## An improved and simpler way (1)
+- Assumptions for this tutorial:
+    - Rstudio is installed and also `git` is available
+    - packages `devtools`, `usethis`, `roxygen2`, `testthat`, `covr` and `lintr` are installed
+- Using package `usethis` to create a package skeleton (and a corresponding Rstudio project) 
+    - `?usethis::create_package()`
+- Note: take care to use an absolute path here if you're already in an rstudio project
+- Then we can add additional parts for a good package *"selectively"*
+
+## An improved and simpler way (2)
+
+- These codes create a new package `urosconf` and a Rstudio project
+```{r, eval = FALSE}
+usethis::create_package(path = "~/urosconf")
+```
+
+- if Rstudio is available, it switches to the new project
+- Note: one may change defaults of the `DESCRIPTION` file
+```{r, eval = FALSE}
+usethis::create_package(path = "~/urosconf", fields = list(
+  `Authors@R` = 'person(
+    given = "Bernhard", family = "Meindl", 
+    email = "bernhard.meindl@statistik.at", role = c("aut", "cre"))',
+  License = "GPL-3",
+  Version = "0.1"
+))
+```
+
+## An improved and simpler way (3)
+- content of the `DESCRIPTION` file
+```{r comment='', echo = FALSE}
+cat(readLines("files/DESCRIPTION_1"), sep = "\n")
+```

@@ -1,0 +1,46 @@
+---
+title: Modern Packaging in R
+subtitle: Best practices (CI, testing, linting and more)
+author: Bernhard Meindl (bernhard.meindl@statistik.gv.at)
+institute: Statistics Austria (QM)
+location: uRos 2019 - Bukarest
+date: May, 2019
+output: 
+  slideSTAT::slideSTAT:
+    toc: false
+    center_images: true 
+    language: en
+---
+
+```{r, child = "01_motivation.Rmd"}
+```
+
+```{r, child = "02_create_pkg.Rmd"}
+```
+
+```{r, child = "03_git.Rmd"}
+```
+
+```{r, child = "04_add_features.Rmd"}
+```
+
+```{r, child = "05_add_functionality.Rmd"}
+```
+
+```{r, child = "06_document_pkg.Rmd"}
+```
+
+```{r, child = "07_use_rcpp.Rmd"}
+```
+
+```{r, child = "08_ci.Rmd"}
+```
+
+```{r, child = "09_test_and_coverage.Rmd"}
+```
+
+```{r, child = "10_code_style.Rmd"}
+```
+
+```{r, child = "11_finish.Rmd"}
+```

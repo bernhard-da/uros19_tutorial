@@ -1,0 +1,34 @@
+# Using CI
+
+## Using CI (1)
+- *Continous integration*: allows to automatically build, check, test and deploy our code
+- runs whenever the underlying code base (typically a connected git repo) changes
+- we are using *Travis CI*: ([`travis-ci.org`](https://travis-ci.org))
+    - allows to build, test and check `R` packages 
+    - account is required, but you can you your github.com account
+    - required to authorize travis to be able to access your github repos
+    - after successful authorizing and syncing the accounts, the new `urosconf` repo is shown
+
+## Using CI (2)
+- telling R that we want to use travis
+```{r, eval = FALSE}
+usethis::use_travis()
+```
+
+- it adds a basic `.travis.yml` file
+- adds this file to `.Rbuildignore`
+- useful settings in `.travis.yml`
+    - `warnings_are_errors: true`
+    - `r_check_args: "--as-cran"`
+
+## Using CI (3)
+- additional options
+```{r comment='', echo = FALSE}
+cat(readLines("files/travis.yml"), sep = "\n")
+```
+
+## Using CI (4)
+- further documentation: [`travis for R`](https://docs.travis-ci.com/user/languages/r)
+- *additional options*:
+  - `after_success:` additional steps that should be done after the package was successfully built, checked and tested can be listed
+  - `deploy:`  it is possible to copy results, e.g a [`pkgdown site`](https://pkgdown.r-lib.org/)

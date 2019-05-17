@@ -1,0 +1,54 @@
+
+# Testing the Package
+## Adding Tests (1)
+- Testing the package is important
+- package [`testthat`](https://cran.r-project.org/package=testthat) can be used for this
+- setting up the testing infrastucture is as easy as
+```{r, eval = FALSE}
+usethis::use_testthat()
+```
+
+- adds `testthat` to field `Suggests` in `DESCRIPTION`
+- creates a folder `tests` in which the unit-tests should be placed
+
+## Adding Tests (2)
+- add as many files and tests folder `tests/testthat` as you like
+- we add `files/tests/test_hello.R` (must start with `test*`)
+```{r, echo = FALSE}
+fs::dir_tree("files/tests")
+```
+
+- content of `tests/testthat/test_hello.R`
+```{r comment='', echo = FALSE}
+cat(readLines("files/tests/testthat/test_greets.R"), sep = "\n")
+```
+
+- finally, all tests can be run using `devtools::test()`
+
+## Monitoring test coverage (1)
+- *Code Coverage*: measures the percentage of code that is tested through unit tests
+- we want the percentage as high as possible
+- we are using package [`covr`](https://cran.r-project.org/package=covr)
+- interactive: `covr::report()` returns an clickable html-widget
+
+- provides backends to two online code coverage tools
+    - [*coveralls.io*](https://coveralls.io/)
+    - [*codecov.io*](https://codecov.io/)
+    
+## Monitoring test coverage (2)
+- we are now using [*codecov.io*](https://codecov.io/)
+- adding the coverage step to the package can be done with:
+```{r, eval = FALSE}
+usethis::use_coverage("codecov")
+```
+
+- this function
+  - creates `codecov.yml` 
+  - updates `.Rbuildignore`
+  - updates `.travis.yml` adding
+- after the package is successfully built, the code coverage is computed and uploaded
+
+```{bash, eval = FALSE}
+after_success:
+  - Rscript -e 'covr::coveralls()'
+```
