@@ -39,7 +39,7 @@ usethis::use_data_raw()
 # add data.R for documentation
 
 # make use of Rcpp
-use_rcpp()
+usethis::use_rcpp()
 # update R/urosconfpkg-package.R
 # add a function in src/info.cpp
 devtools::load_all()
