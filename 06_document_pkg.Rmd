@@ -44,7 +44,7 @@ usethis::use_vignette("intro")
 
 - updates `NAMESPACE` with required `Imports` and `Suggests`
 - updates `DESCRIPTION` to specify the vignette builder (markdown)
-- adding files that should be ignored in `git` (see later)
+- adding files that should be ignored in `git`
 - creates `vignettes/intro.Rmd` with a default template
 
 ## Adding a package vignette (2)

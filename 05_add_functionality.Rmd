@@ -14,7 +14,7 @@ cat(readLines("files/R/greets_nodoc.R"), sep = "\n")
 ## Adding R code (2)
 - the `DESCRIPTION file now is`
 ```{r comment='', echo = FALSE}
-cat(readLines("files/DESCRIPTION_3"), sep = "\n")
+cat(strtrim(readLines("files/DESCRIPTION_3"), 60), sep = "\n")
 ```
 
 # Adding data

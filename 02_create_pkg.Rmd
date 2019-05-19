@@ -21,15 +21,15 @@
 
 ## An improved and simpler way (2)
 
-- These codes create a new package `urosconf` and a Rstudio project
+- These codes create a new package `urosconfpkg` and a Rstudio project
 ```{r, eval = FALSE}
-usethis::create_package(path = "~/urosconf")
+usethis::create_package(path = "~/urosconfpkg")
 ```
 
 - if Rstudio is available, it switches to the new project
 - Note: one may change defaults of the `DESCRIPTION` file
 ```{r, eval = FALSE}
-usethis::create_package(path = "~/urosconf", fields = list(
+usethis::create_package(path = "~/urosconfpkg", fields = list(
   `Authors@R` = 'person(
     given = "Bernhard", family = "Meindl", 
     email = "bernhard.meindl@statistik.at", role = c("aut", "cre"))',
@@ -39,7 +39,7 @@ usethis::create_package(path = "~/urosconf", fields = list(
 ```
 
 ## An improved and simpler way (3)
-- content of the `DESCRIPTION` file
+- content of the `DESCRIPTION` file (after some manual updates)
 ```{r comment='', echo = FALSE}
-cat(readLines("files/DESCRIPTION_1"), sep = "\n")
+cat(strtrim(readLines("files/DESCRIPTION_1"), 60), sep = "\n")
 ```

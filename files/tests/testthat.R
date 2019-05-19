@@ -1,4 +1,4 @@
 library(testthat)
-library(urosconf)
+library(urosconfpkg)
 
-test_check("urosconf")
+test_check("urosconfpkg")

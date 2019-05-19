@@ -6,8 +6,8 @@
 #' @return `NULL`
 #' @export
 #' @examples
-#' greets("alex")
-greets <- function(name = "bernhard") {
+#' greets()
+greets <- function(name = "everybody") {
   s <- "hi {name}, the uros 2019 in bukarest is great!"
   message(glue::glue(s, name = shQuote(name)))
 }

@@ -18,13 +18,13 @@
 knitr::include_graphics("files/img/badge.png")
 ```
 
-
 ## Improve the package (2)
 - [pkgdown](https://pkgdown.r-lib.org/) is a nice way to build a static webpage for a package
     - github has github pages (free hosting for static project pages)
     - `usethis::use_pkgdown()`
     - automatic deployment via travis $\rightarrow$ [documentation](https://pkgdown.r-lib.org/reference/deploy_site_github.html)
 - `devtools::spell_check()` allows to detect typos
+- run `goodpractice::gp()` to get additional hints to improve the package
 - use package analytics, e.g. using the [cranlogs](https://cranlogs.r-pkg.org/) package
 - think of good examples to help users
 
@@ -42,3 +42,6 @@ knitr::include_graphics("files/img/badge.png")
 ## Finishing (2)
 - Once everything works, it is easy to reproduce for other packages
 - `devtools::release()` ? :)
+- **Downloads**
+    - [sample package](https://github.com/bernhard-da/urosconfpkg)
+    - [slides](https://github.com/bernhard-da/uros19_tutorial)

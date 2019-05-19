@@ -7,7 +7,7 @@
     - allows to build, test and check `R` packages 
     - account is required, but you can you your github.com account
     - required to authorize travis to be able to access your github repos
-    - after successful authorizing and syncing the accounts, the new `urosconf` repo is shown
+    - after successful authorizing and syncing the accounts, the new `urosconfpkg` repo is shown
 
 ## Using CI (2)
 - telling R that we want to use travis

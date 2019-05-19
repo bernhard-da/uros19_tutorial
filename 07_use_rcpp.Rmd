@@ -12,16 +12,16 @@ usethis::use_rcpp()
 
 ## Using Rcpp (2)
 - We get instructions how to update our `NAMESPACE` via roxygen2
-- we update a `R/urosconf-pkg.R` adding at the top
+- we update a `R/urosconfpkg-package.R` adding at the top
 
 ```{r comment='', echo = FALSE}
-cat(readLines("files/R/urosconf-pkg.R"), sep = "\n")
+cat(readLines("files/R/urosconfpkg-package.R"), sep = "\n")
 ```
 
 ## Using Rcpp (3)
 - The updated `DESCRIPTION` file now is
 ```{r comment='', echo = FALSE}
-cat(readLines("files/DESCRIPTION_4"), sep = "\n")
+cat(strtrim(readLines("files/DESCRIPTION_4"), 60), sep = "\n")
 ```
 
 ## Using Rcpp (4)
