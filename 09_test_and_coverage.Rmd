@@ -55,9 +55,11 @@ after_success:
 
 ## Monitoring test coverage (3)
 Link [**codecov**](https://codecov.io) and [**travis**](https://travis-ci.org)
+
 - Login to [**codecov.io**](https://codecov.io) 
   - `Add new repository` $\rightarrow$ Select your package
   - copy `Upload Token`
+
 - Login to [**travis-ci**](https://travis-ci.org)
     - Go to your package
     - `More options` $\rightarrow$ `Settings`
