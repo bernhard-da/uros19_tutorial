@@ -50,5 +50,17 @@ usethis::use_coverage("codecov")
 
 ```{bash, eval = FALSE}
 after_success:
-  - Rscript -e 'covr::coveralls()'
+  - Rscript -e 'covr::codecov()'
 ```
+
+## Monitoring test coverage (3)
+Link [**codecov**](https://codecov.io) and [**travis**](https://travis-ci.org)
+- Login to [**codecov.io**](https://codecov.io) 
+  - `Add new repository` $\rightarrow$ Select your package
+  - copy `Upload Token`
+- Login to [**travis-ci**](https://travis-ci.org)
+    - Go to your package
+    - `More options` $\rightarrow$ `Settings`
+    - Under `Environment variables` add:
+        * *Name*: "CODECOV_TOKEN"
+        * *Value*: der Token 
