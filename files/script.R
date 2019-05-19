@@ -24,7 +24,7 @@ usethis::use_news_md()
 usethis::use_readme_rmd()
 
 # use roxygen2 and enable markdown documentation
-use_roxygen_md()
+usethis::use_roxygen_md()
 
 # add a vignette boilerplate
 usethis::use_vignette("intro")
