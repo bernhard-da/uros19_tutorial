@@ -17,6 +17,6 @@ install.packages(
 ```
 
 ### (Final) Demo package: 
-you can download [**here**](https://github.com/bernhard-da/urosconfpkg)
+you can download all the material [**here**](https://github.com/bernhard-da/urosconfpkg)
 
 ## See you in Bukarest :)
