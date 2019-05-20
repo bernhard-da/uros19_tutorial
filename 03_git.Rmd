@@ -21,7 +21,7 @@ knitr::include_graphics("files/img/git.png")
     
 - it is required to have  [github.com](github.com) account
 - we need to set up authentification, either 
-    - `usethis::browse_github_pat()` using an access tokens or
+    - `usethis::browse_github_pat()` using an access token or
     - using public/private key authorization, see `?usethis::use_github`
 - Good documentation can be found [**here**](https://usethis.r-lib.org/articles/articles/usethis-setup.html)
 
